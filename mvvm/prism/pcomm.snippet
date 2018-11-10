@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>pcomm</Title>
+			<Shortcut>pcomm</Shortcut>
+			<Description>Code snippet for ICommand prop prism</Description>
+			<Author>Stanko Nikolic</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Property type</ToolTip>
+					<Default>ICommand</Default>
+				</Literal>
+				<Literal>
+					<ID>property</ID>
+					<ToolTip>Property name</ToolTip>
+					<Default>Command</Default>
+				</Literal>
+				<Literal>
+					<ID>field</ID>
+					<ToolTip>The variable backing this property</ToolTip>
+					<Default>command</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[private $type$ $field$;
+
+	public $type$ $property$ => this.$field$ ?? (this.$field$ = new DelegateCommand(() => { }));
+	$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
